@@ -14,7 +14,7 @@ def SSD300(input_shape=(300, 300, 3), num_classes=21,
            num_priors=[4, 6, 6, 6, 4, 4], weights_path=None,
            return_base=False):
 
-    image = Input(shape=input_shape)
+    image = Input(shape=input_shape, name='input_1')
 
     # Block 1 -----------------------------------------------------------------
     conv1_1 = Conv2D(64, (3, 3), padding='same', activation='relu')(image)
